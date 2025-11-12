@@ -8,7 +8,7 @@
 /* —— body + fonts —— */
 body {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  color: #333;
+  color: #e3a535;
   display: flex;
   justify-content: center;
 }
@@ -20,14 +20,40 @@ body {
 
 /* header */
 .site-header {
-  text-align: center;
-  padding-top: 50px;
+  /* Fixed header that stays in place while scrolling */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff003b;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .site-title {
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 10px;
+  font-size: 25px;
+  margin-left: 12px;
+  font-family: Helvetica;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* logo inside header */
+.site-header .logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* ensure page content is not hidden under the fixed header */
+.page-wrapper {
+  width: 90%;
+  max-width: 900px;
+  padding-top: 88px; /* space for the fixed header */
 }
 
 /* chat window */
@@ -42,7 +68,7 @@ body {
   font-size: 18px;
   line-height: 1.5;
   overflow-y: auto;
-  background: #fafafa;
+  background: #ffffff;
   white-space: pre-line;
 }
 
@@ -81,7 +107,7 @@ body {
 
 .chat-form button {
   font-size: 18px;
-  background: #000;
+  background: #ff003b;
   color: #fff;
   border: none;
   padding: 12px;
@@ -99,7 +125,7 @@ body {
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: #e3a535;
 }
 
 .chat-form button:focus {
@@ -125,7 +151,7 @@ body {
   margin: 60px 0 40px;
   text-align: center;
   font-size: 14px;
-  color: #666;
+  color: #e3a535;
 }
 
 .site-footer nav {
@@ -139,5 +165,5 @@ body {
 }
 
 .site-footer a:hover {
-  color: #666666;
+  color: #ff003b;
 }
