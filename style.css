@@ -167,3 +167,39 @@ body {
 .site-footer a:hover {
   color: #ff003b;
 }
+
+/* Responsive tweaks: reduce header/title/logo on small screens */
+@media (max-width: 600px) {
+  .site-header {
+    height: 64px;
+  }
+  .site-header .logo {
+    height: 34px;
+  }
+  .site-title {
+    font-size: 18px;
+    margin-left: 8px;
+  }
+  .page-wrapper {
+    padding-top: 76px;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-header {
+    height: 56px;
+  }
+  .site-header .logo {
+    height: 28px;
+  }
+  .site-title {
+    font-size: 16px;
+    margin-left: 6px;
+  }
+  .page-wrapper {
+    padding-top: 64px;
+  }
+  .chat-window {
+    font-size: 16px;
+  }
+}
